@@ -1,75 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="./ssuwtano.js"></script>
+    <link rel="stylesheet" href="ssuwatno.css" />
     <title>Gus' Portfolio</title>
-</head>
-<body class="bg-gray-900">
+  </head>
+  <body class="bg-gray-900">
     <div class="flex flex-col gap-y-12 items-center px-16 py-16 pt-32">
-        <nav class="bg-white w-full fixed rounded-full flex justify-around items-center">
-            <a href="#home">
-
-            </a>
-            <a href="#">
-
-            </a>
-            <a href="">
-
-            </a>
-            <a href="">
-
-            </a>
-        </nav>
-        <div class="text-white flex flex-col gap-y-2">
-            <h1 class="text-4xl font-sans font-medium font-mono">
-                Hello!
-            </h1>
-            <h2 class="text-5xl font-mono font-semibold">
-                My name is <span class="text-red-600">Gus</span>
-            </h2>
-            <h3 id="cipher-text" class="text-2xl font-mono">
-                And I'm a fullstack developer
-            </h3>
-        </div>
-        <img class="w-80 aspect-square rounded-full" src="https://avatars.githubusercontent.com/u/58824744?v=4" alt="portrait">
+      <nav
+        class="bg-white w-full fixed rounded-full flex justify-around items-center"
+      >
+        <a href="#home"> </a>
+        <a href="#"> </a>
+        <a href=""> </a>
+        <a href=""> </a>
+      </nav>
+      <div class="text-white flex flex-col gap-y-2">
+        <h1 class="text-3xl font-sans font-medium font-mono">Hello!</h1>
+        <h2 class="text-4xl font-mono font-semibold">
+          My name is <span class="text-red-600">Gus</span>
+        </h2>
+        <h3
+          id="cipher-text"
+          class="text-xl font-mono whitespace-nowrap text-gray-500"
+        >
+          And I'm a fullstack developer
+        </h3>
+      </div>
+      <img
+        class="w-80 aspect-square rounded-full"
+        src="https://avatars.githubusercontent.com/u/58824744?v=4"
+        alt="portrait"
+      />
     </div>
-    <main class="px-12 text-white">
-        <div>
-            <h1 class="text-white underline underline-offset-8 font-mono text-3xl">
-                About
-            </h1>
-            <p class="text-lg my-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum amet velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit sunt harum aut! Laboriosam pariatur aliquid enim iste ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum amet velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit sunt harum aut! Laboriosam pariatur aliquid enim iste ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum amet velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit sunt harum aut! Laboriosam pariatur aliquid enim iste ullam.
-            </p>
-        </div>
-        <div>
-            <h1>
-                Experiences
-            </h1>
-            <div class="grid grid-rows-3 gap-y-4">
-                <div class="card">
-                    <img src="./images/sidata.jpeg" />
-                    <h1>3 Months Internship @SiData+</h1>
-                    <p>
-                        I took a 3 months internship at SiData+@Siriraj as a frontend developer. I took my oppotunity to learn React and Next.js
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="./images/itx.png" alt="">
-                    <h1>
-                        Vice-President at ITExperience Club (ITX)
-                    </h1>
-                    <p>
-                        I'm currently vice president of ITExperience club in IT Faculty at King Mongkut's Institute of Technology Ladkrabang
-                    </p>
-                </div>
-                <div class="card">
-
-                </div>
+    <main class="px-8 sm:px-16 text-white flex flex-col gap-y-6">
+      <div>
+        <h1
+          class="text-white mb-6 underline underline-offset-8 font-mono text-3xl"
+        >
+          About
+        </h1>
+        <p class="text-lg my-2 mb-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id harum amet
+          velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit
+          sunt harum aut! Laboriosam pariatur aliquid enim iste ullam. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Id harum amet
+          velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit
+          sunt harum aut! Laboriosam pariatur aliquid enim iste ullam. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Id harum amet
+          velit. Nam adipisci ut fugit ipsum, magni ad molestias reprehenderit
+          sunt harum aut! Laboriosam pariatur aliquid enim iste ullam.
+        </p>
+      </div>
+      <div>
+        <h1 class="text-3xl underline font-mono underline-offset-8 mb-2">
+          Education
+        </h1>
+        <div class="flex flex-col gap-y-8 py-8">
+          <div class="card">
+            <div>
+              <img width="96" height="96" src="./images/bcc.png" />
+              <h1>Bangkok Christian College</h1>
             </div>
+            <p>Study through Grade 1 - 9</p>
+          </div>
+          <div class="card">
+            <div>
+              <img width="96" height="96" src="./images/spsm.png" alt="" />
+              <h1 class="">SPSM (Secondary Division)</h1>
+            </div>
+            <p>
+              Srinakharinwirot University Demonstration School Prasarnmit
+              (Secondary Divison).
+            </p>
+            <p>Study through Grade 9 - 12</p>
+          </div>
+          <div class="card">
+            <div>
+              <img width="96" height="96" src="./images/spsm.png" alt="" />
+              <h1 class="">IT@KMITL</h1>
+            </div>
+            <p>
+              School of Information Technology @ King Mongkut's Institute of
+              Technology Ladkrabang
+            </p>
+            <p>Currently studying for a bachelor degree in Science</p>
+          </div>
         </div>
+      </div>
+      <div>
+        <h1 class="text-3xl underline font-mono underline-offset-8 mb-2">
+          Experiences
+        </h1>
+        <div class="flex flex-col gap-y-8 py-8">
+          <div class="card">
+            <div>
+              <img width="96" height="96" src="./images/sidata.jpeg" />
+              <h1>3 Months Internship @SiData+</h1>
+            </div>
+            <p>
+              I took a 3 months internship at SiData+@Siriraj as a frontend
+              developer. I took my oppotunity to learn React and Next.js
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <img width="96" height="96" src="./images/itx.png" alt="" />
+              <h1>Vice-President at ITExperience Club (ITX)</h1>
+            </div>
+            <p>
+              I'm currently vice president of ITExperience club in IT Faculty at
+              King Mongkut's Institute of Technology Ladkrabang
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

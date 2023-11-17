@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 32px;
+  background-color: #ffffff50;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transform: scale(1.025);
+}
+
+.card div {
+  display: flex;
+  align-items: baseline;
+  gap: 32px 24px;
+}
+
+.card img {
+  border-radius: 99999px;
+}
+
+.card p {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.card h1 {
+  font-size: 24px;
+  font-family: monospace;
+  justify-self: flex-start;
+  align-self: center;
+  font-weight: bold;
+}
