@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  object-fit: contain;
+}
+
 .card {
   display: flex;
   flex-direction: column;

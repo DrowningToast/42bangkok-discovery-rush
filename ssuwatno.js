@@ -21,7 +21,7 @@ function generateRandomString(length) {
 const playAnimation = (delay = 500, node = cipher, intervalOffset = 50) => {
   const nodeText = node.innerText;
   const nodeLength = node.innerText.length;
-  let nodeIndex = 0; 
+  let nodeIndex = 0;
 
   setTimeout(() => {
     interval = setInterval(() => {
@@ -30,25 +30,13 @@ const playAnimation = (delay = 500, node = cipher, intervalOffset = 50) => {
       node.innerText = revealed + random;
       nodeIndex++;
     }, intervalOffset);
-    setTimeout( () => {
-      clearInterval(interval)
-    }, (nodeLength + 1) * intervalOffset)
+    setTimeout(() => {
+      clearInterval(interval);
+    }, (nodeLength + 1) * intervalOffset);
   }, delay);
 };
 
-const about = document.getElementById("about-text");
-
 window.addEventListener("load", () => {
-  const delay = 200
+  const delay = 200;
   playAnimation(delay);
-  playAnimation(0, about, 10)
-});
-
-
-let observer = new IntersectionObserver(() => {
-  playAnimation(0, about);
-}, {
-  root: about,
-  rootMargin: "0px",
-  threshold: 0.2,
 });
