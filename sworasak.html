@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <!-- Nav bar -->
     <div class="navBar">
-        <a class="navHref" href="#">
+        <a class="navHref" href="index.html">
             <div class="navItem">
                 <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 24 24" color="green">
                     <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"></path>
                 </svg>
-                Home
+                <span class="navTxt">Home</span>
             </div>
         </a>
         <a  class="navHref" href="#Infos">
@@ -25,7 +26,7 @@
                 <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 24 24">
                     <path d="M12,2C6.477,2,2,6.477,2,12s4.477,10,10,10s10-4.477,10-10S17.523,2,12,2z M12,17L12,17c-0.552,0-1-0.448-1-1v-4 c0-0.552,0.448-1,1-1h0c0.552,0,1,0.448,1,1v4C13,16.552,12.552,17,12,17z M12.5,9h-1C11.224,9,11,8.776,11,8.5v-1 C11,7.224,11.224,7,11.5,7h1C12.776,7,13,7.224,13,7.5v1C13,8.776,12.776,9,12.5,9z"></path>
                 </svg>
-                Infos
+                <span class="navTxt">Infos</span>
             </div>
         </a>
         <a  class="navHref" href="#Skills">
@@ -33,7 +34,7 @@
                 <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 24 24">
                     <path d="M 11.984375 -0.013671875 A 1.0001 1.0001 0 0 0 11 1 L 11 2 A 1.0001 1.0001 0 1 0 13 2 L 13 1 A 1.0001 1.0001 0 0 0 11.984375 -0.013671875 z M 4.2109375 3.2109375 A 1.0001 1.0001 0 0 0 3.515625 4.9296875 L 4.2226562 5.6367188 A 1.0001 1.0001 0 1 0 5.6367188 4.2226562 L 4.9296875 3.515625 A 1.0001 1.0001 0 0 0 4.2109375 3.2109375 z M 19.757812 3.2128906 A 1.0001 1.0001 0 0 0 19.070312 3.515625 L 18.363281 4.2226562 A 1.0001 1.0001 0 1 0 19.777344 5.6367188 L 20.484375 4.9296875 A 1.0001 1.0001 0 0 0 19.757812 3.2128906 z M 12 5 C 8.14 5 5 8.14 5 12 C 5 14.785 6.639 17.188453 9 18.314453 L 9 21 C 9 22.103 9.897 23 11 23 L 13 23 C 14.103 23 15 22.103 15 21 L 15 18.314453 C 17.361 17.188453 19 14.785 19 12 C 19 8.14 15.86 5 12 5 z M 1 11 A 1.0001 1.0001 0 1 0 1 13 L 2 13 A 1.0001 1.0001 0 1 0 2 11 L 1 11 z M 22 11 A 1.0001 1.0001 0 1 0 22 13 L 23 13 A 1.0001 1.0001 0 1 0 23 11 L 22 11 z M 4.9101562 18.060547 A 1.0001 1.0001 0 0 0 4.2226562 18.363281 L 3.515625 19.070312 A 1.0001 1.0001 0 1 0 4.9296875 20.484375 L 5.6367188 19.777344 A 1.0001 1.0001 0 0 0 4.9101562 18.060547 z M 19.060547 18.060547 A 1.0001 1.0001 0 0 0 18.363281 19.777344 L 19.070312 20.484375 A 1.0001 1.0001 0 1 0 20.484375 19.070312 L 19.777344 18.363281 A 1.0001 1.0001 0 0 0 19.060547 18.060547 z"></path>
                 </svg>
-                Skills
+                <span class="navTxt">Skills</span>
             </div>
         </a>
         <a  class="navHref" href="#Contacts">
@@ -41,31 +42,103 @@
                 <svg class="navIcon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 24 24">
                     <path d="M13.172,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8.828c0-0.53-0.211-1.039-0.586-1.414l-4.828-4.828 C14.211,2.211,13.702,2,13.172,2z M15,18H9c-0.552,0-1-0.448-1-1v0c0-0.552,0.448-1,1-1h6c0.552,0,1,0.448,1,1v0 C16,17.552,15.552,18,15,18z M15,14H9c-0.552,0-1-0.448-1-1v0c0-0.552,0.448-1,1-1h6c0.552,0,1,0.448,1,1v0 C16,13.552,15.552,14,15,14z M13,9V3.5L18.5,9H13z"></path>
                 </svg>
-                Contacts
+                <span class="navTxt">Contacts</span>
             </div>
         </a>
     </div>
 
+    <!-- Section -->
     <section class="sectionContainer" id="Infos">
         <h1 class="header">Infos</h1>
-        <div class="infosItem">
+        <div class="infosItem animeBorder">
             <div class="infosImgCon">
-                <img class="infoImg" src="https://scontent.fbkk22-7.fna.fbcdn.net/v/t39.30808-6/400722103_2483468951854555_5139464359067169318_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHN3IVdH76JX93cCWajLzH6r0lZvJzCi52vSVm8nMKLnRkavW6NapS9iyb4LZGGaKWgwDZ5H0JioZ4_JEE38gr8&_nc_ohc=d28_ASQL7zMAX9UCrcQ&_nc_ht=scontent.fbkk22-7.fna&oh=00_AfC_tnrcIynFXRk57a-ZtbCPSnuvQsNIXAIyNpzyLA75Aw&oe=655D8C60" alt="me">
+                <img class="infoImg" src="img/profile.jpeg" alt="me">
             </div>
             <div style="display:flex;justify-content:center;flex-direction: column;">
-                <p class="infoP"><span style="color: aqua;">Name: </span>Siwanart Worasaksirikun</p>
-                <p class="infoP"><span style="color: aqua;">Nickname: </span>Tian/N</p>
-                <p class="infoP"><span style="color: aqua;">Sex: </span>Male</p>
-                <p class="infoP"><span style="color: aqua;">Birthday: </span>28 Dec, 2002;</p>
-                <p class="infoP"><span style="color: aqua;">Age: </span>20</p>
+                <p><span style="color: aqua;">Name: </span>Siwanart Worasaksirikun</p>
+                <p><span style="color: aqua;">Nickname: </span>Tian/N</p>
+                <p><span style="color: aqua;">Sex: </span>Male</p>
+                <p><span style="color: aqua;">Birthday: </span>28 Dec, 2002</p>
+                <p><span style="color: aqua;">Age: </span>20</p>
             </div>
         </div>
     </section>
+
     <section class="sectionContainer" id="Skills">
-        skills...
+        <h1 class="header">Skills</h1>
+        <div class="cardContainer">
+            <div class="card animeBorder">
+                <div class="cardImgCon">
+                    <img class="cardImg" src="img/Skill1.jpeg" alt="Skill1">
+                </div>
+                <div class="cardTxt">
+                    <h2 class="cardHeader">Music</h2>
+                    <p>I know basic theory. I can play instrument such as guitar and recorder. I also can produce simple songs.</p>
+                </div>
+            </div>
+            <div class="card animeBorder">
+                <div class="cardImgCon">
+                    <img class="cardImg" src="img/Skill2.jpeg" alt="Skill2">
+                </div>
+                <div class="cardTxt">
+                    <h2 class="cardHeader">Art</h2>
+                    <p>I can draw some arts. I also can make a simple 3D object. (I draw this image.)</p>
+                </div>
+            </div>
+            <div class="card animeBorder">
+                <div class="cardImgCon">
+                    <img class="cardImg" src="img/Skill3.jpeg" alt="Skill3">
+                </div>
+                <div class="cardTxt">
+                    <h2 class="cardHeader">Coding</h2>
+                    <p>I can make website with HTML, CSS and Javascript. I also know about Python and Java.</p>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="sectionContainer" id="Contacts">
-        contact...
+        <h1 class="header">Contacts</h1>
+        <div class="contactsItem animeBorder">
+            <a class="contacts"  target="_blank"; href="https://www.facebook.com/NGamer2845Personal/" >
+                <div class="contactsDiv">
+                    <p>
+                        <span style="color: aqua;">Facebook: </span>
+                        ศิวนาถ วรศักดิ์สิริกุล
+                    </p>
+                </div>
+            </a>
+            <a class="contacts"  target="_blank"; href="https://twitter.com/@NGamer2845">
+                <div class="contactsDiv">
+                    <p>
+                        <span style="color: aqua;">X (Twitter): </span>
+                        @NGamer2845
+                    </p>
+                </div>
+            </a>
+            <a class="contacts"  target="_blank"; href="https://discordapp.com/users/313978537122201601">
+                <div class="contactsDiv">
+                    <p>
+                        <span style="color: aqua;">Discord: </span>
+                        @NGamer2845
+                    </p>
+                </div>
+            </a>
+            <a class="contacts"  target="_blank"; href="mailto:ngamer2545.28@gmail.com">
+                <div class="contactsDiv">
+                    <p>
+                        <span style="color: aqua;">Email: </span>
+                        ngamer2545.28@gmail.com
+                    </p>
+                </div>
+            </a>
+            <div class="contactsDiv">
+                <p>
+                    <span style="color: aqua;">Phone: </span>
+                    0874919936
+                </p>
+            </div>
+        </div>
     </section>
 </body>
 </html>

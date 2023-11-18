@@ -3,8 +3,6 @@
     color: white;
 }
 
-html {height: 100%;}
-
 html, body{
     margin: 0;
     background-color: black;
@@ -24,6 +22,7 @@ html {scroll-behavior: smooth;}
     align-items: center;
     justify-content: space-evenly;
     font-size: 32px;
+    z-index: 10;
 }
 
 .navHref{
@@ -45,6 +44,7 @@ html {scroll-behavior: smooth;}
 .navItem:hover{
     background-color: white;
     color: black;
+    animation: hovering 3000ms ease infinite;
 }
 .navItem:active{
     background-color: rgb(150, 150, 150);
@@ -54,7 +54,7 @@ html {scroll-behavior: smooth;}
 .navItem:hover .navIcon, .navItem:active .navIcon{fill: black;}
 
 .sectionContainer{
-    padding: 100px 0;
+    padding: 50px 0;
     height: 1200px;
     display: flex;
     justify-content: center;
@@ -62,9 +62,23 @@ html {scroll-behavior: smooth;}
     flex-direction: column;
 }
 
+#Infos{    
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,60,1) 100%);
+}
+
+#Skills{
+    background: linear-gradient(180deg, rgba(0,0,60,1) 0%, rgba(0,40,0,1) 100%);
+}
+
+#Contacts{
+    background: linear-gradient(180deg, rgba(0,40,0,1) 0%, rgba(40,0,40,1) 100%);
+}
+
 .header{
     margin: 0px;
     font-size: 200px;
+    text-shadow: 0px 0px 10px cyan;
+    animation: blink-text 2000ms linear infinite;
 }
 
 .infosItem{
@@ -78,19 +92,98 @@ html {scroll-behavior: smooth;}
     font-size: 36px;
 }
 
-.infosImgCon{
+.infosImgCon, .cardImgCon{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .infoImg {width: 400px;}
 
-.infoP {margin: 0px 0px 20px 0px;}
+p {margin: 10px 0px 10px 0px;}
 
 
+.contactsItem{
+    width: 600px;
+    height: 500px;
+    border: 5px solid white;
+    border-radius: 30px;
+    padding: 75px;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 36px;
+}
 
+.contacts, .contactsDiv{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media screen and (max-width: 1280px){
+.contacts{cursor: pointer;}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
+.card{
+    width: 250px;
+    height: 450px;
+    border: 5px solid white;
+    border-radius: 30px;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+}
+
+.cardImg{
+    width: 225px;
+    border: 5px solid cyan;
+    border-radius: 20px;
+}
+
+.cardHeader{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.cardTxt{font-size: 18px;}
+
+.animeBorder{
+    animation: colorRotate 5s linear infinite;
+}
+
+@keyframes blink-text {
+	0% {opacity: 1;}
+	1% {opacity: 0;}
+	5% {opacity: 1;}
+    11% {opacity: 0;}
+	15% {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+@keyframes hovering {
+	0% {background-color: white}
+    25% {background-color: rgba(100,100,200,1);}
+    50% {background-color: rgba(100,200,100,1)}
+    75% {background-color: rgba(200,100,200,1)}
+    100% {background-color: white}
+}
+
+@keyframes colorRotate {
+    0% {box-shadow: 10px 10px 10px yellow, -10px -10px 10px magenta; }
+    25% {box-shadow: -10px 10px 10px yellow, 10px -10px 10px magenta; }
+    50% {box-shadow: -10px -10px 10px yellow, 10px 10px 10px magenta; }
+    75% {box-shadow: 10px -10px 10px yellow, -10px 10px 10px magenta; }
+    100% {box-shadow: 10px 10px 10px yellow, -10px -10px 10px magenta;}
+}
+
+@media screen and (max-width: 1200px){
     .header{font-size: 150px;}
     .infosItem{
         width: 400px;
@@ -98,10 +191,70 @@ html {scroll-behavior: smooth;}
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding: 50px;
-        font-size: 26px;
+        font-size: 24px;
     }
     .infoP {margin: 0px;}
     .infoImg {width: 300px;}
+
+    .contactsItem{
+        width: 400px;
+        height: 400px;
+        font-size: 24px;
+        padding: 50px;
+    }
+
+    .cardContainer{
+        gap: 25px;
+    }
+    .card{
+        width: 150px;
+        height: 350px;
+        padding: 25px;
+        grid-template-rows: 45% 55%;
+    }
+    .cardImg{width: 125px;}
+    .cardHeader{font-size: 24px;}
+    .cardTxt{font-size: 15px;}
+}
+
+@media screen and (max-width: 700px){
+    .sectionContainer{
+        padding: 125px 0;
+        height: 600px;
+    }
+    p {margin: 5px 0px 5px 0px;}
+    .header{font-size: 80px;}
+    .infosItem{
+        width: 230px;
+        height: 350px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+        font-size: 15px;
+    }
+    .infoImg {width: 180px;}
+
+    .contactsItem{
+        width: 250px;
+        height: 250px;
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    .cardContainer{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        width: 240px;
+        height: 100px;
+        padding: 15px;
+        grid-template-columns: 45% 55%;
+        grid-row: 1fr;
+    }
+    .cardImgCon{height: 100px;}
+    .cardImg{width: 75px; border-radius: 10px;}
+    .cardHeader{font-size: 15px;}
+    .cardTxt{font-size: 10px;}
 }
 
 @media screen and (max-width: 860px){
@@ -110,6 +263,17 @@ html {scroll-behavior: smooth;}
     .navIcon{width: 24px; height: 24px;}
 }
 
+
+
 @media screen and (max-width: 600px){
     .navIcon{display: none;}
+}
+
+@media screen and (max-width: 500px){
+    .navTxt{display: none;}
+    .navIcon{
+        display: block;
+        width: 35px; 
+        height: 35px;
+    }
 }
