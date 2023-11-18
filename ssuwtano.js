@@ -1,9 +1,6 @@
-const cipher = document.getElementById("cipher-text");
-const cipherText = cipher.innerText;
-const cipherLength = cipher.innerText.length;
-let cipherIndex = 0;
+const node = document.getElementById("cipher-text");
+
 let interval;
-let cipherIntervalOffset = 50;
 
 /**
  *
@@ -21,13 +18,33 @@ function generateRandomString(length) {
   return result;
 }
 
-window.addEventListener("load", () => {
+const playAnimation = (delay = 500, node = node) => {
+  const nodeText = node.innerText;
+  const nodeLength = node.innerText.length;
+  let nodeIndex = 0;
+  let intervalOffset = 50;
+
   setTimeout(() => {
     interval = setInterval(() => {
-      const revealed = cipherText.slice(0, cipherIndex);
-      const random = generateRandomString(cipherLength - cipherIndex);
-      cipher.innerText = revealed + random;
-      cipherIndex++;
-    }, cipherIntervalOffset);
-  }, 500);
+      const revealed = nodeText.slice(0, nodeIndex);
+      const random = generateRandomString(nodeLength - nodeIndex);
+      node.innerText = revealed + random;
+      nodeIndex++;
+    }, intervalOffset);
+  }, delay);
+};
+
+window.addEventListener("load", () => {
+  playAnimation(500);
+});
+
+node.addEventListener("mouseenter", () => {
+  cipherIntervalOffset = 25;
+  playAnimation(0);
+});
+
+const about = document.getElementById("about-text");
+
+let observer = new IntersectionObserver(() => {
+  playAnimation(0);
 });
