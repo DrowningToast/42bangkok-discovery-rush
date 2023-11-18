@@ -1,4 +1,4 @@
-const node = document.getElementById("cipher-text");
+const cipher = document.getElementById("cipher-text");
 
 let interval;
 
@@ -18,11 +18,10 @@ function generateRandomString(length) {
   return result;
 }
 
-const playAnimation = (delay = 500, node = node) => {
+const playAnimation = (delay = 500, node = cipher, intervalOffset = 50) => {
   const nodeText = node.innerText;
   const nodeLength = node.innerText.length;
-  let nodeIndex = 0;
-  let intervalOffset = 50;
+  let nodeIndex = 0; 
 
   setTimeout(() => {
     interval = setInterval(() => {
@@ -31,20 +30,25 @@ const playAnimation = (delay = 500, node = node) => {
       node.innerText = revealed + random;
       nodeIndex++;
     }, intervalOffset);
+    setTimeout( () => {
+      clearInterval(interval)
+    }, (nodeLength + 1) * intervalOffset)
   }, delay);
 };
 
-window.addEventListener("load", () => {
-  playAnimation(500);
-});
-
-node.addEventListener("mouseenter", () => {
-  cipherIntervalOffset = 25;
-  playAnimation(0);
-});
-
 const about = document.getElementById("about-text");
 
+window.addEventListener("load", () => {
+  const delay = 200
+  playAnimation(delay);
+  playAnimation(0, about, 10)
+});
+
+
 let observer = new IntersectionObserver(() => {
-  playAnimation(0);
+  playAnimation(0, about);
+}, {
+  root: about,
+  rootMargin: "0px",
+  threshold: 0.2,
 });
