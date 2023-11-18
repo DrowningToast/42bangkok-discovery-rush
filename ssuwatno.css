@@ -21,6 +21,8 @@
 
 .card img {
   border-radius: 99999px;
+  width: 96px;
+  height: 96px;
 }
 
 .card p {
@@ -34,4 +36,31 @@
   justify-self: flex-start;
   align-self: center;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card h1 {
+    font-size: 16px;
+    font-family: monospace;
+    justify-self: flex-start;
+    align-self: center;
+    font-weight: bold;
+  }
+  .card img {
+    width: 64px;
+    height: 64px;
+  }
+  .card {
+    padding: 12px 12px;
+    gap: 8px;
+  }
+  .card div {
+    gap: 8px 8px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .card h1 {
+    font-size: 16px;
+  }
 }
